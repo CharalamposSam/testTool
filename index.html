@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters count</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>TestTool</h1>
+    <div class="BigContainer">
+
+        <div class="numOfChar">Characters: <span>0</span></div>
+
+        <div class="textareaCont">
+            <textarea cols="100" rows="20"></textarea>
+            <span></span>
+        </div>
+
+        <div class="generateCont">
+            <select id="generateCharactes">
+                <option value="latin">Latin</option>
+                <option value="greek">Greek</option>
+                <option value="chinese">Chinese</option>
+            </select>
+            <div class="checkboxes">
+                <label class="container">One
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Two
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Three
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <span>Characters</span>
+            <span class="inputCont">
+                <input type="number" class="numOfcharToGenerate" value="50">
+                <span></span>
+            </span>
+            <span class="alertMessage"><span>Mandatory</span><img src="icons/arrowUp.png" alt="arrow"></span>
+            <button class="generate"><img src="icons/generate.png" alt="Generate"><span>Generate</span></button>
+        </div>
+
+        <div class="copyCont">
+            <div class="copied">Copied!</div>
+            <div class="copyAlert"><img src="icons/alert.png" alt="alert">Field is empty</div>
+            <button class="copy"><img src="icons/copy.png" alt="copy"> Copy</button>
+        </div>
+
+        <div class="downloadFilesCont">
+            <select id="selectFile">
+                <option value="files/Larger1.5mb.pdf">PDF larger 1.5mb</option>
+                <option value="files/Smaller1.5mb.pdf">PDF smaller 1.5mb</option>
+                <option value="files/Larger1.5mb.txt">TXT larger 1.5mb</option>
+                <option value="files/Smaller1.5mb.txt">TXT smaller 1.5mb</option>
+                <option value="files/Larger1.5mb.png">PNG larger 1.5mb</option>
+                <option value="files/Smaller1.5mb.png">PNG smaller 1.5mb</option>
+                <option value="files/Larger1.5mb.jpg">JPG larger 1.5mb</option>
+                <option value="files/Smaller1.5mb.jpg">JPG smaller 1.5mb</option>
+                <option value="files/LargerThan1.5mb.xlsx">XLSX larger 1.5mb</option>
+                <option value="files/Smaller1.5mb.xlsx">XLSX smaller 1.5mb</option>
+                <option value="files/Larger1.5mb.docx">DOCX larger 1.5mb</option>
+                <option value="files/Smaller1.5mb.docx">DOCX smaller 1.5mb</option>
+                <option value="files/Larger1.5mb.xml">XML larger 1.5mb</option>
+                <option value="files/Smaller1.5mb.xml">XML smaller 1.5mb</option>
+                <option value="files/Smaller1.5mb.gif">GIF smaller 1.5mb</option>
+            </select>
+            <button><img src="icons/download_icon.png" alt="Download Icon">Download</button>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -13,7 +13,9 @@ const textarea = document.querySelector('textarea'),
   checkboxesContainer = document.querySelector('.checkboxes'),
   generateCont = document.querySelector('.generateCont'),
   selectFile = document.querySelector('#selectFile'),
-  btnDownloadFile = document.querySelector('.downloadFilesCont button')
+  btnDownloadFile = document.querySelector('.downloadFilesCont button'),
+  downloadFileName = document.querySelector('.downloadFilesCont input'),
+  downloadFileExt = document.querySelector('.downloadFilesCont p')
 
 textarea.addEventListener('keyup', getTheNumber)
 textarea.addEventListener('paste', getTheNumber)
@@ -129,11 +131,27 @@ copyBtn.addEventListener('click', () => {
   }
 })
 
+selectFile.addEventListener('change', () => {
+  let val = selectFile.value
+  let name = val.split('/')[1]
+  let name1 = name.split('.')[0]
+  let name2 = name.split('.')[1]
+  let ext = name.split('.')[2]
+  console.log(ext)
+  downloadFileName.value = `${name1}.${name2}`
+  downloadFileExt.textContent = `.${ext}`
+})
+
 btnDownloadFile.addEventListener('click', () => {
-  console.log(selectFile.value)
+  let newName = downloadFileName.value
+  let ext = selectFile.value
+  ext = ext.split('.')[2]
+
+  console.log(ext)
+
   let a = document.createElement('a')
   a.href = selectFile.value
-  a.setAttribute('download', '')
+  a.setAttribute('download', `${newName}.${ext}`)
   document.body.appendChild(a)
   a.click()
   a.remove()

@@ -217,7 +217,7 @@ h1 {
 }
 
 .generateCont .generate {
-  height: 22px;
+  height: 24px;
   background: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,6 +231,7 @@ h1 {
   cursor: pointer;
   margin-left: 5px;
   border: 2px solid black;
+  padding: 3px 8px;
 }
 
 .generateCont .generate span {
@@ -243,8 +244,6 @@ h1 {
   width: 10px;
   height: 10px;
   display: block;
-  -webkit-filter: invert(1);
-          filter: invert(1);
 }
 
 .generateCont .alertMessage {
@@ -291,6 +290,7 @@ h1 {
 }
 
 .copyCont button {
+  height: 24px;
   outline: none;
   cursor: pointer;
   padding: 0;
@@ -307,7 +307,8 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   border: 2px solid black;
-  padding: 5px 8px;
+  padding: 3px 8px;
+  font-size: 12px;
 }
 
 .copyCont button img {

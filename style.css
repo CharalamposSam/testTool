@@ -116,6 +116,8 @@ h1 {
           user-select: none;
   margin: 0;
   overflow: hidden;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .generateCont .checkboxes .container input {
@@ -183,6 +185,8 @@ h1 {
 .generateCont .inputCont {
   position: relative;
   display: block;
+  width: 63px;
+  height: 22px;
 }
 
 .generateCont .inputCont input {
@@ -204,14 +208,12 @@ h1 {
 
 .generateCont .inputCont span {
   position: absolute;
-  bottom: 3px;
+  bottom: 0px;
   left: 0px;
   width: 60px;
   height: 1px;
   background-color: #f85858;
   opacity: 0;
-  -webkit-transform: translateY(-65px);
-          transform: translateY(-65px);
 }
 
 .generateCont .generate {
@@ -255,7 +257,7 @@ h1 {
           align-items: center;
   position: absolute;
   bottom: 60%;
-  left: 60.5%;
+  left: 49%;
   width: 115px;
   height: 12px;
   font-size: 12px;

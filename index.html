@@ -26,27 +26,36 @@
                 <option value="chinese">Chinese</option>
             </select>
             <div class="checkboxes">
-                <label class="container">One
-                    <input type="checkbox" checked="checked">
+                <label class="container" style="display:none;">
+                    <input type="checkbox" checked="true">
                     <span class="checkmark"></span>
                 </label>
-                <label class="container">Two
+                <label class="container">Lowercase
+                    <input type="checkbox" checked="true">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Uppercase
                     <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <label class="container">Three
+                <label class="container">Numbers
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Symbols
                     <input type="checkbox">
                     <span class="checkmark"></span>
                 </label>
             </div>
 
             <span>Characters</span>
-            <span class="inputCont">
+            <div class="inputCont">
                 <input type="number" class="numOfcharToGenerate" value="50">
                 <span></span>
-            </span>
+            </div>
             <span class="alertMessage"><span>Mandatory</span><img src="icons/arrowUp.png" alt="arrow"></span>
             <button class="generate"><img src="icons/generate.png" alt="Generate"><span>Generate</span></button>
+
         </div>
 
         <div class="copyCont">

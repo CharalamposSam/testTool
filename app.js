@@ -40,27 +40,36 @@ function generate() {
   let characters
 
   if (generateCharactes.value == 'latin') {
-    characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    if (checkboxes[1].checked == true && checkboxes[2].checked == false) {
+      characters = 'abcdefghijklmnopqrstuvwxyz'
+    }
+    if (checkboxes[2].checked == true && checkboxes[1].checked == false) {
+      characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    }
+    if (checkboxes[1].checked == true && checkboxes[2].checked == true) {
+      characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    }
   } else if (generateCharactes.value == 'greek') {
-    characters = 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ'
+    if (checkboxes[1].checked == true && checkboxes[2].checked == false) {
+      characters = 'αβγδεζηθικλμνξοπρστυφχψω'
+    }
+    if (checkboxes[2].checked == true && checkboxes[1].checked == false) {
+      characters = 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ'
+    }
+    if (checkboxes[1].checked == true && checkboxes[2].checked == true) {
+      characters = 'αβγδεζηθικλμνξοπρστυφχψωΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ'
+    }
   } else if (generateCharactes.value == 'chinese') {
     characters = '诶比西迪伊艾弗吉尺杰开吉吾儿贼德'
   }
 
-  if (checkboxes[0].checked == true) {
-    if (generateCharactes.value == 'latin') {
-      characters += 'abcdefghijklmnopqrstuvwxyz'
-    } else if (generateCharactes.value == 'greek') {
-      characters += 'αβγδεζηθικλμνξοπρστυφχψω'
-    }
-  }
-  if (checkboxes[1].checked == true) {
+  if (checkboxes[3].checked == true) {
     characters += '0123456789'
   }
-  if (checkboxes[2].checked == true) {
+  if (checkboxes[4].checked == true) {
     characters += '!@#$%^&*+_-;'
   }
-  //console.log(characters)
+  console.log(characters)
   let lengthNum = +document.querySelector('.numOfcharToGenerate').value
   let result = ''
   for (let i = 0; i < lengthNum; i++) {

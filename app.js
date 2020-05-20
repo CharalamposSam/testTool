@@ -87,7 +87,7 @@ generateCont.addEventListener('change', () => {
     })
   } else {
     checkboxesContainer.classList.remove('disableCheckBox')
-    checkboxes[0].checked = true
+    checkboxes[1].checked = true
   }
 })
 
